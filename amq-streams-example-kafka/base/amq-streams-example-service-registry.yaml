@@ -1,0 +1,9 @@
+kind: ApicurioRegistry
+apiVersion: registry.apicur.io/v1
+metadata:
+  name: amq-streams-example-service-registry
+spec:
+  configuration:
+    kafkasql:
+      bootstrapServers: 'amq-streams-example-kafka-kafka-bootstrap:9092'
+    persistence: kafkasql
