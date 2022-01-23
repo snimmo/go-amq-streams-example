@@ -5,3 +5,14 @@ namespace: amq-streams-example-kafka
 
 resources:
   - ../../base
+
+patchesJson6902:
+  - target:
+      group: route.openshift.io
+      version: v1
+      kind: Route
+      name: amq-streams-example-service-registry-route
+    patch: |-
+      - op: add
+        path: /spec/host
+        value: amq-streams-example-service-registry.apps.ocp.snimmo.com

@@ -6,4 +6,5 @@ namespace: amq-streams-example-kafka
 resources:
   - amq-streams-example-kafka.yaml
   - amq-streams-example-service-registry.yaml
+  - amq-streams-example-service-registry-route.yaml
   - topics
